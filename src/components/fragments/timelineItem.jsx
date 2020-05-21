@@ -3,10 +3,10 @@ import React from 'react'
 const TimeLineItem = (props) => {
 
     return (
-        <div>
-            <p>{props.year}</p>
+        <div className='timeLineItem'>
+            <p className='itemYear'>{props.year}</p>
             <div className='timeLineImg'/>
-            <p>{props.description}</p>
+            <p className='itemDesc'>{props.description}</p>
         </div>
     )
 }

@@ -4,7 +4,7 @@ const InfoItem = (props) => {
 
     const investorFill = () => {
         return (
-            <div>
+            <div className='logo'>
                 <div className={props.investorName}/>
             </div>
         )
@@ -12,7 +12,7 @@ const InfoItem = (props) => {
 
     const officeFill = () => {
         return (
-            <div>
+            <div className='office'>
                 <div className='officeIcon'/>
                 <h2>{props.location}</h2>
                 <p>{props.address}</p>
@@ -21,7 +21,7 @@ const InfoItem = (props) => {
     }
 
     return (
-        <div>
+        <div className='infoBody'>
             {
                 props.type === 'investor' ?
                 investorFill() :

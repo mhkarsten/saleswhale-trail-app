@@ -4,10 +4,9 @@ import React from 'react'
 const Footer = (props) => {
 
     return (
-        <section>
-            <div>
-                <div className='swFooterLogo'/>
-                <div>
+        <section className='footerBody'>
+            <div className='linkSection'>
+                <div className='linkBox'>
                     <p>Why Saleswhale</p>
                     <a href='#'>Collaborative Intelligence</a>
                     <a href='#'>AI Assistant Capabilities</a>
@@ -16,14 +15,14 @@ const Footer = (props) => {
                     <a href='#'>Use Case-Education</a>
                     <a href='#'>Use Case-Events</a>
                 </div>
-                <div>
+                <div className='linkBox'>
                     <p>Product</p>
                     <a href='#'>AI Conversations</a>
                     <a href='#'>Lead Enrichment</a>
                     <a href='#'>Deal Intelligence</a>
                     <a href='#'>Workflow Integration</a>
                 </div>
-                <div>
+                <div className='linkBox'>
                     <p>Company</p>
                     <a href='#'>About US</a>
                     <a href='#'>Blog</a>
@@ -31,7 +30,7 @@ const Footer = (props) => {
                     <a href='#'>Careers</a>
                     <a href='#'>Help Centre</a>
                 </div>
-                <div>
+                <div className='contactBox'>
                     <p>Contact</p>
                     <a href='#'>hello@saleswhale.com</a>
                     <p>US Office</p>
@@ -40,7 +39,7 @@ const Footer = (props) => {
                     <p>155B Telok Ayer Street Singapore, 068611</p>
                 </div>
             </div>
-            <div>
+            <div className='footerEnd'>
                 <div>
                     <a>Privacy</a>
                     <a>Terms</a>
