@@ -43,7 +43,9 @@ const App = (props) => {
           </div>
         </div>
       </section>
-      <Footer/>
+      <div className='footerBG'>
+        <Footer/>
+      </div>
     </main>
   );
 }

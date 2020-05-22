@@ -8,7 +8,6 @@ const Progress = (props) => {
         <section className='progressBody'>
             <h1 className='textTitle'>Our Progress</h1>
             <div className='timeLineBox'>
-                <div className='timeLineLine'/>
                 <TimeLineItem year='2015' description='Founded in Singapore by Gabriel Lim, Ethan Le, and Venus Wong'/>
                 <TimeLineItem year='2016' description='Accepted into Y Combinator (S16) and moved to San Francisco'/>
                 <TimeLineItem year='2017' description='Raised US$1.2M in seed funding and hired core engineers'/>
