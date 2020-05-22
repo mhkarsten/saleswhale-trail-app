@@ -6,7 +6,9 @@ const Footer = (props) => {
     return (
         <section className='footerBody'>
             <div className='linkSection docWidth'>
-                <div className='SWlogo footerLogo' style={{marginRight: 'auto'}}/>
+                <div className='SWLogoBox' style={{marginRight: 'auto'}}>
+                    <div className='SWlogo footerLogo' />
+                </div>
                 <div className='linkBox'>
                     <p>Why Saleswhale</p>
                     <a href='#'>Collaborative Intelligence</a>

@@ -21,7 +21,7 @@ const App = (props) => {
           <h1 className='textTitle'>Our Offices</h1>
           <div className='officeSpacer'>
             <InfoItem type='office' location='Singapore' address='155B Telok Ayer Street Singapore, 068611'/>
-            <InfoItem type='office' location='Washington DC' address='1701 Rhode Island Ave NWWashington, DC 20036'/>
+            <InfoItem type='office' location='Washington DC' address='1701 Rhode Island Ave NW Washington, DC 20036'/>
           </div>
         </div>
         <div className='investorBox docWidth'>
