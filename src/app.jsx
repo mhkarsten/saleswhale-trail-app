@@ -38,8 +38,8 @@ const App = (props) => {
         <div className='futureBox'>
           <h1>See the future</h1>
           <div className='futureButtonSpacer'>
-            <button>Get a Demo</button>
-            <button>Read use cases</button>
+            <button className='buttonBlue invertBlue'>Get a Demo</button>
+            <button className='buttonOutline invertOutline'>Read use cases</button>
           </div>
         </div>
       </section>

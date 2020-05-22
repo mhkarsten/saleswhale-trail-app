@@ -5,6 +5,7 @@ $progress-bg: #EFF8FF;
 $footer-bg: #F4F4F4;
 
 .buttonBlue {
+  box-sizing: border-box;
   border: none;
   padding: 1vh 2vh 1vh 2vh;
   border-radius: 5px;
@@ -18,12 +19,13 @@ $footer-bg: #F4F4F4;
 }
 
 .buttonOutline {
+  box-sizing: border-box;
   border: none;
   padding: 1vh 2vh 1vh 2vh;
   border-radius: 5px;
   background: none;
   border-color: $blue;
-  border: 2px solid $blue;
+  border: 1px solid $blue;
   color: $blue;
   font-style: normal;
   font-weight: bold;
@@ -81,13 +83,13 @@ $footer-bg: #F4F4F4;
     display: flex;
     justify-content: space-between;
   }
+}
 
-  .headerLogo {
-    background-image: url('../resources/saleswhale_logo.svg');
-    height: 32px;
-    width: 186px;
+.SWlogo {
+  background-image: url('../resources/saleswhale_logo.svg');
+  height: 32px;
+  width: 186px;
 
-  }
 }
 
 .headerBody {
@@ -282,8 +284,8 @@ $footer-bg: #F4F4F4;
   border: 1px solid #E5E5E5;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
-  height: 25vh;
-  width: 24vw;
+  height: 27vh;
+  width: 25vw;
   background-color: white;
   margin: 5vh 0 5vh 0;
 
@@ -322,13 +324,22 @@ $footer-bg: #F4F4F4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 3.5vh;
+    box-sizing: border-box;
 
     h2 {
       margin: 0;
+      margin: 1.5vh 0 1vh 0;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 34px;
     }
 
     p {
+      margin: 0;
       width: 50%;
+      text-align: center;
     }
   }
 }
@@ -337,12 +348,40 @@ $footer-bg: #F4F4F4;
   width: 65vw;
   margin: auto;
 
+
+  .futureButtonSpacer {
+    width: 28vw;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 250px;
+      height: 60px;
+    }
+
+    .invertBlue {
+      background-color: white;
+      color: $font-black;
+      border-color: white;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .invertOutline {
+      color: white;
+      border-color: white;
+    }
+  }
+
   .futureBox {
     width: 100%;
     height: 40vh;
     margin: auto;
     background-color: $blue;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     h1 {
       text-align: center;
@@ -351,37 +390,112 @@ $footer-bg: #F4F4F4;
       font-weight: bold;
       font-size: 48px;
       line-height: 120%;
+      margin-top: 0;
     }
   
   }
 }
 
 .footerBody {
-  height: 700px;
   width: 65vw;
   margin: auto;
-
 
   .linkSection {
     display: flex;
     justify-content: flex-end;
+    padding: 6vh 0 5vh 0;
 
     .linkBox {
       margin: 0 1vw 0 1vw;
       display: flex;
       flex-direction: column;
-    }
-  }
 
-  .footerBody {
+      p {
+        margin: 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 42px;
+      }
+
+      a {
+        margin: 1vh 0 1vh 0;
+        text-decoration: none;
+        color: $font-black;
+      }
+    }
+
+    .contactBox {
+      width: 11vw;
+      margin-left: 3vw;
+
+      .miniTitle {
+        margin: 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 42px;
+      }
+
+      .miniDesc {
+        margin: 0 0 2vh 0;
+        text-decoration: none;
+        color: $font-black;
+      }
+    }
 
   }
 
   .footerEnd {
+    background-color: $footer-bg;
     height: 300px;
     width: 100%;
     background-repeat: no-repeat;
     background-image: url('../resources/footer_waves.svg');
     background-position: bottom;
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 3vw 0 3vw;
+    box-sizing: border-box;
+
+    .termsBox {
+      width: 7vw;
+      display: flex;
+      justify-content: space-between;
+      
+      a {
+        text-decoration: none;
+        color: $font-black;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .socialBox {
+      width: 8vw;
+      display: flex;
+      justify-content: space-between;
+    }
   }
+}
+
+.socialIcon {
+  background-repeat: no-repeat;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.facebookIcon {
+  background-image: url('../resources/socials/facebook.svg');
+}
+
+.twitterIcon {
+  background-image: url('../resources/socials/twitter.svg');
+}
+
+.linkedInIcon {
+  background-image: url('../resources/socials/linkedin.svg');
 }

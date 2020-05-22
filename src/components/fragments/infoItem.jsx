@@ -15,7 +15,7 @@ const InfoItem = (props) => {
             <div className='office'>
                 <div className='officeIcon'/>
                 <h2>{props.location}</h2>
-                <p>{props.address}</p>
+                <p className='textNormal'>{props.address}</p>
             </div>
         )
     }

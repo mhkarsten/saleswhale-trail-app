@@ -4,7 +4,7 @@ import React from 'react'
 const Nav = (props) => {
     return (
         <div className='nav'>
-            <div className='headerLogo'/>
+            <div className='SWlogo'/>
             <div className='navLinkBox'>
                 <a href='#'>Why Saleswhale?</a>
                 <a href='#'>Product</a>

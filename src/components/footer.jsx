@@ -6,6 +6,7 @@ const Footer = (props) => {
     return (
         <section className='footerBody'>
             <div className='linkSection'>
+                <div className='SWlogo' style={{marginRight: 'auto', marginLeft: '3%'}}/>
                 <div className='linkBox'>
                     <p>Why Saleswhale</p>
                     <a href='#'>Collaborative Intelligence</a>
@@ -31,23 +32,26 @@ const Footer = (props) => {
                     <a href='#'>Help Centre</a>
                 </div>
                 <div className='contactBox'>
-                    <p>Contact</p>
-                    <a href='#'>hello@saleswhale.com</a>
-                    <p>US Office</p>
-                    <p>1701 Rhode Island Ave NWWashington, DC 20036</p>
-                    <p>Singapore Office</p>
-                    <p>155B Telok Ayer Street Singapore, 068611</p>
+                    <p className='miniTitle'>Contact</p>
+                    <a href='mailto:hello@saleswhale.com' className='miniDesc' style={{marginBottom: 0}}>hello@saleswhale.com</a>
+                    <p className='miniTitle' style={{marginTop: '2vh'}}>US Office</p>
+                    <p className='miniDesc'>1701 Rhode Island Ave NW Washington, DC 20036</p>
+                    <p className='miniTitle'>Singapore Office</p>
+                    <p className='miniDesc' style={{marginBottom: 0}}>155B Telok Ayer Street Singapore, 068611</p>
                 </div>
             </div>
             <div className='footerEnd'>
-                <div>
-                    <a>Privacy</a>
-                    <a>Terms</a>
+                <div className='privacyBox'>
+                    <div className='termsBox'>
+                        <a href='#'>Privacy</a>
+                        <a href='#'>Terms</a>
+                    </div>
+                    <p>© 2020 Saleswhale, Inc. All rights reserved.</p>
                 </div>
-                <div>
-                    <a className='facebookIcon'> </a>
-                    <a className='twitterIcon'> </a>
-                    <a className='linkedInIcon'> </a>
+                <div className='socialBox'>
+                    <a href='https://www.facebook.com/saleswhaleio/' className='facebookIcon socialIcon'> </a>
+                    <a href='https://twitter.com/saleswhaleio' className='twitterIcon socialIcon'> </a>
+                    <a href='https://www.linkedin.com/company/saleswhale/' className='linkedInIcon socialIcon'> </a>
                 </div>
             </div>
         </section>
