@@ -4,9 +4,8 @@ import CultureItem from './fragments/cultureItem'
 
 const Culture = (props) => {
 
-
     return (
-        <section className='cultureBody'>
+        <section className='cultureBody docWidth'>
             <div className='cultureTitle'>
                 <h1 className='textTitle'>Our Culture</h1>
                 <p className='textSubTitle'>At Saleswhale, we encourage everyone to grow and innovate, while having fun in the process. </p>

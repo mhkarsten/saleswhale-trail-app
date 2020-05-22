@@ -54,13 +54,18 @@ $footer-bg: #F4F4F4;
   line-height: 32px;
 }
 
+.docWidth {
+  width: 65vw;
+  margin: auto;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 12vh;
   width: 63vw;
   margin: auto;
-  height: 108px;
 
   .navLinkBox {
     width: 20vw;
@@ -94,8 +99,6 @@ $footer-bg: #F4F4F4;
 
 .headerBody {
   height: 900px;
-  width: 65vw;
-  margin: auto;
 
   .headerImage {
     background-image: url('../resources/header_img.svg');
@@ -121,13 +124,10 @@ $footer-bg: #F4F4F4;
       width: 25vw;
     }
   }
-
 }
 
 .cultureBody {
-  width: 65vw;
-  margin: auto;
-  height: 800px;
+  margin-bottom: 10vh;
 
   .cultureBottomDesc{
     width: 100%;
@@ -188,9 +188,6 @@ $footer-bg: #F4F4F4;
 }
 
 .progressBody {
-  width: 65vw;
-  margin: auto;
-
   h1 {
     text-align: center;
     margin-bottom: 8vh;
@@ -270,8 +267,6 @@ $footer-bg: #F4F4F4;
   background-position: 0 25vw;
 
   .officeBox {
-    width: 65vw;
-    margin: auto;
 
     .officeIcon {
       height: 80px;
@@ -289,8 +284,6 @@ $footer-bg: #F4F4F4;
   }
 
   .investorBox {
-    width: 65vw;
-    margin: auto;
     margin-top: 18vh;
 
     .investorSpacer {
@@ -369,8 +362,6 @@ $footer-bg: #F4F4F4;
 }
 
 .futureBody {
-  width: 65vw;
-  margin: auto;
   margin-top: 13vh;
   margin-bottom: 7vh;
 
@@ -422,9 +413,6 @@ $footer-bg: #F4F4F4;
 }
 
 .footerBody {
-  width: 65vw;
-  margin: auto;
-
   .linkSection {
     display: flex;
     justify-content: flex-end;
@@ -455,17 +443,23 @@ $footer-bg: #F4F4F4;
       margin-left: 3vw;
 
       .miniTitle {
+        display: inline-block;
         margin: 0;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
         line-height: 42px;
+        margin: 2vh 0 0 0;
       }
 
       .miniDesc {
-        margin: 0 0 2vh 0;
+        margin: 0;
         text-decoration: none;
         color: $font-black;
+
+        a {
+          display: inline-block;
+        }
       }
     }
 
@@ -473,7 +467,6 @@ $footer-bg: #F4F4F4;
 
   .footerEnd {
     height: 300px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 5vh 3vw 0 3vw;
@@ -540,4 +533,323 @@ $footer-bg: #F4F4F4;
   height:55%;
   content:"";
   background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .buttonBlue {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .buttonOutline {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .docWidth {
+    width: 80vw
+  }
+
+  .textTitle {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .textSubTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .textNormal {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .nav {
+    width: 83vw;
+    height: 8vh;
+    .navLinkBox, .loginButtonBox {
+      display: none;
+    }
+  }
+
+  .headerBody {
+    .headerImage {
+      margin: 2vw 0 5vw 0 !important;
+      width: 100%;
+      background-position: 40% 0;
+    }
+
+    .headerTextBox {
+      justify-content: space-between !important;
+      .headerTitle {
+        width: 35vw;
+      }
+      .introText {
+        width: 40vw;
+      }
+    }
+  }
+
+  .cultureItemBody {
+    width: 24vw;
+
+    .cultureIcon {
+      height: 60px;
+      width: 60px;
+      background-size: cover;
+    }
+
+    h3 {
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+  }
+
+  .cultureBody {
+    .cultureItemBox {
+      margin: 5vh 0 5vh 0;
+    }
+
+    .textSubTitle {
+      width: 55vw;
+      margin: auto;
+    }
+  }
+  
+  .progressBody {
+    h1 {
+      margin-bottom: 5vh;
+    }
+
+    .timeLineBox {
+      padding: 2vh 0 2vh 18vw !important;
+      height: 70vh;
+    }
+  
+    .timeLineBox::before {
+      left:27.5vw !important;
+    }
+  }
+
+  .timeLineItem {
+    width: 70vw;
+
+    .timeLineImg {
+      height: 55px;
+      width: 55px !important;
+      background-size: cover;
+      margin: 0 2vw 0 2vw;
+    }
+
+    .itemDesc, .itemYear {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .itemDesc {
+      width: 44vw;
+    }
+  }
+
+  .infoItemBody::before {
+    top: 25vh;
+    height: 30%;
+  }
+
+  .infoItemBody {
+    margin-top: 10vh;
+    background-position: 0 50vw;
+
+    .combinatorLogo {
+      height: 62px;
+      width: 220px;
+      background-size: cover;
+    }
+    .monksHillLogo {
+      height: 86px;
+      width: 172px;
+      background-size: cover;
+    }
+    .striveLogo {
+      height: 39px;
+      width: 160px;
+      background-size: cover;
+    }
+    .wavemakerLogo {
+      height: 86px;
+      width: 187px;
+      background-size: cover;
+    }
+  }
+
+  .infoBody {
+    width: 37vw;
+    height: auto;
+    margin: 3vh 0 3vh 0;
+
+    .logo {
+      height: 15vh;
+    }
+
+    .office {
+      padding-top: 2.5vh;
+      padding-bottom: 2.5vh;
+
+      .officeIcon {
+        height: 55px;
+        width: 55px;
+        background-size: cover;
+
+      }
+      h2 {
+        font-size: 26px;
+        line-height: 34px;
+       }
+
+       p {
+         width: 70%;
+       }
+    }
+  }
+
+  .investorBox {
+    margin-top: 6vh !important;
+  }
+
+  .officeSpacer, .investorSpacer {
+    justify-content: space-between !important;
+  }
+
+  .futureBody {
+    margin: 6vh auto 6vh auto;
+    height: 20vh;
+    width: 90vw;
+
+    .invertBlue {
+      width: 150px !important;
+      height: 50px !important;
+    }
+
+    .invertOutline {
+      width: 170px !important;
+      height: 50px !important;
+    }
+
+    .futureBox {
+      height: 20vh;
+
+      h1 {
+        font-size: 28px;
+        line-height: 120%;
+      }
+    }
+
+    .futureButtonSpacer {
+      width: 50%;
+    }
+  }
+
+  .footerBody {
+    .linkSection {
+        flex-wrap: wrap;
+        height: 60vh;
+        padding-top: 0;
+
+        .linkBox, .contactBox {
+          width: 25vw;
+          height: 30vh;
+          margin-left: 5vw;
+
+          a {
+            margin: 0.7vh 0 0.7vh 0;
+          }
+
+          .miniTitle {
+            margin-top: 1vh ;
+          }
+        }
+    }
+
+    .footerLogo {
+      height: 20px;
+      width: 120px;
+      background-size: cover;
+    }
+
+    .footerEnd {
+      .termsBox {
+        width: 17vw;
+
+        a {
+          font-size: 16px;
+          line-height: 14px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 11px;
+        }
+      }
+
+      .socialBox {
+        width: 17vw;
+      }
+
+      .socialIcon {
+        height: 30px;
+        width: 30px;
+        background-size: cover;
+      }
+    }
+  }
+
+  .footerBG::before {
+    height: 67%
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .headerImage {
+    border-radius: 0 !important;
+    background-position: 50% 0 !important;
+  }
+  .headerBody {
+    height: auto;
+  }
+
+  .headerTextBox {
+    flex-direction: column;
+    align-items: center;
+    
+    .headerTitle {
+      width: 80vw !important;
+      margin: 2vh 0 2vh 0 !important;
+    }
+
+    .introText {
+      width: 80vw !important;
+    }
+  }
+
+  .textTitle {
+    text-align: left !important;
+    margin: 12vh 0 2vh 0;
+  }
+
+  .textSubTitle {
+    text-align: left !important;
+    width: 81vw !important;
+    margin: 0 !important;
+  }
+
+  .cultureItemBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cultureItemBody {
+    width: 80vw;
+    margin: 2vh 0 0 0;
+  }
 }

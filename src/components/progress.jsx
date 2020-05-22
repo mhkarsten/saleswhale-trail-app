@@ -5,7 +5,7 @@ import TimeLineItem from './fragments/timelineItem'
 const Progress = (props) => {
 
     return (
-        <section className='progressBody'>
+        <section className='progressBody docWidth'>
             <h1 className='textTitle'>Our Progress</h1>
             <div className='timeLineBox'>
                 <TimeLineItem year='2015' description='Founded in Singapore by Gabriel Lim, Ethan Le, and Venus Wong'/>

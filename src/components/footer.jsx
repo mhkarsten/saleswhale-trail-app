@@ -5,8 +5,8 @@ const Footer = (props) => {
 
     return (
         <section className='footerBody'>
-            <div className='linkSection'>
-                <div className='SWlogo' style={{marginRight: 'auto', marginLeft: '3%'}}/>
+            <div className='linkSection docWidth'>
+                <div className='SWlogo footerLogo' style={{marginRight: 'auto'}}/>
                 <div className='linkBox'>
                     <p>Why Saleswhale</p>
                     <a href='#'>Collaborative Intelligence</a>
@@ -32,15 +32,15 @@ const Footer = (props) => {
                     <a href='#'>Help Centre</a>
                 </div>
                 <div className='contactBox'>
-                    <p className='miniTitle'>Contact</p>
-                    <a href='mailto:hello@saleswhale.com' className='miniDesc' style={{marginBottom: 0}}>hello@saleswhale.com</a>
-                    <p className='miniTitle' style={{marginTop: '2vh'}}>US Office</p>
+                    <p className='miniTitle' style={{marginTop: 0}}>Contact</p>
+                    <a href='mailto:hello@saleswhale.com' className='miniDesc'>hello@saleswhale.com</a>
+                    <p className='miniTitle'>US Office</p>
                     <p className='miniDesc'>1701 Rhode Island Ave NW Washington, DC 20036</p>
                     <p className='miniTitle'>Singapore Office</p>
-                    <p className='miniDesc' style={{marginBottom: 0}}>155B Telok Ayer Street Singapore, 068611</p>
+                    <p className='miniDesc'>155B Telok Ayer Street Singapore, 068611</p>
                 </div>
             </div>
-            <div className='footerEnd'>
+            <div className='footerEnd docWidth'>
                 <div className='privacyBox'>
                     <div className='termsBox'>
                         <a href='#'>Privacy</a>
