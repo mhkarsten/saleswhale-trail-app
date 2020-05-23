@@ -2,7 +2,7 @@ import React from 'react'
 
 import CultureItem from './fragments/cultureItem'
 
-const Culture = (props) => {
+const Culture = () => {
 
     return (
         <section className='cultureBody docWidth'>

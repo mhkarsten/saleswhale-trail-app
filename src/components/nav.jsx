@@ -1,7 +1,7 @@
 import React from 'react'
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-const Nav = (props) => {
+const Nav = () => {
     return (
         <div className='nav'>
             <div className='SWlogo'/>

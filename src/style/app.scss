@@ -5,7 +5,8 @@ $progress-bg: #EFF8FF;
 $footer-bg: #F4F4F4;
 
 .buttonBlue {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   padding: 1vh 2vh 1vh 2vh;
   border-radius: 5px;
@@ -19,7 +20,8 @@ $footer-bg: #F4F4F4;
 }
 
 .buttonOutline {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   padding: 1vh 2vh 1vh 2vh;
   border-radius: 5px;
@@ -31,6 +33,19 @@ $footer-bg: #F4F4F4;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
+}
+
+.buttonOutline:hover, .buttonBlue:hover {
+  -webkit-box-shadow: 5px 7px 14px -2px rgba(0,0,3,1) !important;
+          box-shadow: 5px 7px 14px -2px rgba(0,0,3,1) !important;
+  -webkit-transition: ease-in-out 0.1s;
+  -o-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+} 
+
+.buttonOutline:active, .buttonBlue:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .textTitle {
@@ -60,17 +75,27 @@ $footer-bg: #F4F4F4;
 }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 12vh;
   width: 63vw;
   margin: auto;
 
   .navLinkBox {
     width: 20vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     a {
       text-decoration: none;
@@ -80,13 +105,55 @@ $footer-bg: #F4F4F4;
       font-weight: bold;
       line-height: 23px;
       text-align: center;
+      position: relative;
+
+      $duration: .2s;
+      $distance: 15px;
+      $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+      &:before {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0; right: 0;
+          height: 2px;
+          background-color: $blue;
+          opacity: 0;
+          -webkit-transform: translateY(- $distance);
+              -ms-transform: translateY(- $distance);
+                  transform: translateY(- $distance);
+          -webkit-transition: opacity 0s, -webkit-transform 0s $easeOutBack;
+          transition: opacity 0s, -webkit-transform 0s $easeOutBack;
+          -o-transition: transform 0s $easeOutBack, opacity 0s;
+          transition: transform 0s $easeOutBack, opacity 0s;
+          transition: transform 0s $easeOutBack, opacity 0s, -webkit-transform 0s $easeOutBack;
+      }
+      &:hover,
+      &:focus {
+          &:before {
+
+              opacity: 1;
+              -webkit-transform: translateY(0);
+                  -ms-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-transition: opacity $duration, -webkit-transform $duration $easeOutBack;
+              transition: opacity $duration, -webkit-transform $duration $easeOutBack;
+              -o-transition: transform $duration $easeOutBack, opacity $duration;
+              transition: transform $duration $easeOutBack, opacity $duration;
+              transition: transform $duration $easeOutBack, opacity $duration, -webkit-transform $duration $easeOutBack;
+          }
+      }
     }
   }
 
   .loginButtonBox {
     width: 14vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -111,8 +178,12 @@ $footer-bg: #F4F4F4;
   }
 
   .headerTextBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
 
     .introText {
       margin: 0;
@@ -156,15 +227,24 @@ $footer-bg: #F4F4F4;
   }
 
   .cultureItemBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 8vh 0 8vh 0;
   }
 }
 
 .cultureItemBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 19vw;
 
   .cultureIcon {
@@ -195,9 +275,16 @@ $footer-bg: #F4F4F4;
 
   .timeLineBox {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding: 3vh 0 6vh 7vw;
     background-color: $progress-bg;
     border-radius: 5px;
@@ -219,8 +306,12 @@ $footer-bg: #F4F4F4;
 }
 
 .timeLineItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1;
 
   .timeLineImg {
@@ -255,7 +346,9 @@ $footer-bg: #F4F4F4;
   height:27%;
   content:"";
   background-color: #FFF5F5;;
-  transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);;
+      -ms-transform: rotate(7deg);;
+          transform: rotate(7deg);
 }
 
 .infoItemBody {
@@ -278,8 +371,12 @@ $footer-bg: #F4F4F4;
     }
 
     .officeSpacer {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-evenly;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
     }
   }
 
@@ -287,9 +384,14 @@ $footer-bg: #F4F4F4;
     margin-top: 18vh;
 
     .investorSpacer {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
     }
     h1 {
       text-align: center;
@@ -299,7 +401,8 @@ $footer-bg: #F4F4F4;
 
 .infoBody {
   border: 1px solid #E5E5E5;
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   height: 27vh;
   width: 25vw;
@@ -308,9 +411,15 @@ $footer-bg: #F4F4F4;
 
   .logo {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     div {
       background-repeat: no-repeat;
     }
@@ -338,11 +447,19 @@ $footer-bg: #F4F4F4;
   }
 
   .office {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 3.5vh;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
     h2 {
       margin: 0;
@@ -367,8 +484,12 @@ $footer-bg: #F4F4F4;
 
   .futureButtonSpacer {
     width: 28vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     button {
       width: 250px;
@@ -379,7 +500,8 @@ $footer-bg: #F4F4F4;
       background-color: white;
       color: $font-black;
       border-color: white;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+              box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     .invertOutline {
@@ -394,10 +516,19 @@ $footer-bg: #F4F4F4;
     margin: auto;
     background-color: $blue;
     border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     h1 {
       text-align: center;
@@ -414,14 +545,23 @@ $footer-bg: #F4F4F4;
 
 .footerBody {
   .linkSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding: 6vh 0 5vh 0;
 
     .linkBox {
       margin: 0 1vw 0 1vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
 
       p {
         margin: 0;
@@ -429,6 +569,10 @@ $footer-bg: #F4F4F4;
         font-weight: bold;
         font-size: 18px;
         line-height: 42px;
+      }
+
+      a:hover {
+        text-decoration: underline !important;
       }
 
       a {
@@ -460,22 +604,38 @@ $footer-bg: #F4F4F4;
         a {
           display: inline-block;
         }
+
+        a:hover {
+          text-decoration: underline !important;
+        }
       }
     }
-
   }
 
   .footerEnd {
     height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 5vh 3vw 0 3vw;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
     .termsBox {
       width: 7vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+
+      a:hover {
+        text-decoration: underline !important;
+      }
 
       a {
         text-decoration: none;
@@ -489,8 +649,12 @@ $footer-bg: #F4F4F4;
 
     .socialBox {
       width: 8vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
     }
   }
 }
@@ -503,14 +667,28 @@ $footer-bg: #F4F4F4;
 }
 
 .facebookIcon {
+  display: inline-block;
+  border-radius: 50%;
   background-image: url('../resources/socials/facebook.svg');
 }
 
+.facebookIcon:hover, .twitterIcon:hover, .linkedInIcon:hover {
+  -webkit-box-shadow: inset 3px 3px 4px #000;
+          box-shadow: inset 3px 3px 4px #000;
+  -webkit-transition: ease-in-out 0.1s;
+  -o-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+} 
+
 .twitterIcon {
+  display: inline-block;
+  border-radius: 50%;
   background-image: url('../resources/socials/twitter.svg');
 }
 
 .linkedInIcon {
+  display: inline-block;
+  border-radius: 50%;
   background-image: url('../resources/socials/linkedin.svg');
 }
 
@@ -535,7 +713,8 @@ $footer-bg: #F4F4F4;
   background-color: white;
 }
 
-@media only screen and (max-width: 768px) {
+//for tablets wider than 768 to account for more common device widths 
+@media only screen and (max-width: 810px) {
   .buttonBlue {
     font-size: 16px;
     line-height: 20px;
@@ -580,7 +759,9 @@ $footer-bg: #F4F4F4;
     }
 
     .headerTextBox {
-      justify-content: space-between !important;
+      -webkit-box-pack: justify !important;
+          -ms-flex-pack: justify !important;
+              justify-content: space-between !important;
       .headerTitle {
         width: 35vw;
       }
@@ -718,7 +899,9 @@ $footer-bg: #F4F4F4;
   }
 
   .officeSpacer, .investorSpacer {
-    justify-content: space-between !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
   }
 
   .futureBody {
@@ -752,7 +935,8 @@ $footer-bg: #F4F4F4;
 
   .footerBody {
     .linkSection {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         height: 60vh;
         padding-top: 0;
 
@@ -809,7 +993,8 @@ $footer-bg: #F4F4F4;
   }
 }
 
-@media screen and (max-width: 320px) {
+//for mobile devices wider than 320 to account for more mobile devices
+@media screen and (max-width: 420px) {
   .headerImage {
     border-radius: 0 !important;
     background-position: 50% 0 !important;
@@ -820,8 +1005,13 @@ $footer-bg: #F4F4F4;
   }
 
   .headerTextBox {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     
     .headerTitle {
       width: 80vw !important;
@@ -846,8 +1036,13 @@ $footer-bg: #F4F4F4;
   }
 
   .cultureItemBox {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .cultureItemBody {
@@ -871,6 +1066,7 @@ $footer-bg: #F4F4F4;
   .progressBody {
     width: 100vw;
     height: auto;
+
     h1 {
       text-align: center !important;
       margin-top: 8vh;
@@ -880,12 +1076,14 @@ $footer-bg: #F4F4F4;
       height: calc(100vw + 600px);
       padding: 0 !important;
       width: 100vw;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
 
     .timeLineBox::before {
-      left: 31% !important;
-      width: 1.5%;
+      left: calc(20.75vw + 27.5px) !important;
+      width: 1.5vw;
     }
 
     .itemDesc {
@@ -895,7 +1093,9 @@ $footer-bg: #F4F4F4;
 
   .timeLineItem {
     width: 80vw;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
     .timeLineImg {
       margin: 0 3vw 0 3vw;
@@ -910,12 +1110,17 @@ $footer-bg: #F4F4F4;
   .infoItemBody {
     margin-top: 0;
     background-position: 0 79vh;
-    background-size: 50vh;
+    background-size: 100vw;
     background-image: url('../resources/mobile_bg.svg');
 
     .officeSpacer {
-      flex-direction: column !important;
-      align-items: center;
+      -webkit-box-orient: vertical !important;
+      -webkit-box-direction: normal !important;
+          -ms-flex-direction: column !important;
+              flex-direction: column !important;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
 
     .investorBox {
@@ -939,7 +1144,9 @@ $footer-bg: #F4F4F4;
     background-color: $blue;
     height: 45%;
     width: calc(100% + 1000px);
-    transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
     top: 5vh;
     left: -10vw;
   }
@@ -956,10 +1163,14 @@ $footer-bg: #F4F4F4;
     }
 
     .futureButtonSpacer {
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 80vw;
       height: 18vh;
       margin-top: 4vh;
+
       .invertBlue, .invertOutline {
         width: 80vw !important;
       }
@@ -973,8 +1184,9 @@ $footer-bg: #F4F4F4;
   }
 
   .footerBG::before {
-    height: 70%
+    height: 66%
   }
+
   .footerBody {
     .SWLogoBox {
       width: 80vw;
@@ -984,8 +1196,12 @@ $footer-bg: #F4F4F4;
 
     .linkSection {
       height: auto;
-      justify-content: center;
-      justify-content: space-between;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       width: 85vw;
 
       .linkBox {
@@ -1016,9 +1232,16 @@ $footer-bg: #F4F4F4;
     }
 
     .footerEnd {
-      flex-direction: column-reverse;
-      justify-content: start;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding-top: 5vh;
       width: 85vw;
 
@@ -1027,9 +1250,16 @@ $footer-bg: #F4F4F4;
       }
 
       .privacyBox {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding-top: 5vh;
 
         p {
@@ -1038,8 +1268,13 @@ $footer-bg: #F4F4F4;
         }
 
         .termsBox {
-          flex-direction: column;
-          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
           height: 7vh;
         }
       }

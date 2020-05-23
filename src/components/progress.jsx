@@ -2,7 +2,7 @@ import React from 'react'
 
 import TimeLineItem from './fragments/timelineItem'
 
-const Progress = (props) => {
+const Progress = () => {
 
     return (
         <section className='progressBody docWidth'>

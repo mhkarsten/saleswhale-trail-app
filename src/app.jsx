@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './style/app.scss';
+import './style/app.scss'
 import Nav from './components/nav'
 import Header from './components/header'
 import Culture from './components/culture'
@@ -8,7 +8,7 @@ import Progress from './components/progress'
 import InfoItem from './components/fragments/infoItem'
 import Footer from './components/footer'
 
-const App = (props) => {
+const App = () => {
 
   return (
     <main className='appBody'>
