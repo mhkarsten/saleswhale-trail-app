@@ -296,7 +296,7 @@ $footer-bg: #F4F4F4;
     position:absolute;
     z-index: 1;
     top:0;
-    left:14.7vw;
+    left: calc(10vw + 4em + 23px);
     width: 0.5%;
     height:100%;
     content:"";
@@ -483,7 +483,7 @@ $footer-bg: #F4F4F4;
   margin-bottom: 7vh;
 
   .futureButtonSpacer {
-    width: 28vw;
+    width: calc(500px + 5%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -587,7 +587,7 @@ $footer-bg: #F4F4F4;
       margin-left: 3vw;
 
       .miniTitle {
-        display: inline-block;
+        display: block;
         margin: 0;
         font-style: normal;
         font-weight: bold;
@@ -600,6 +600,7 @@ $footer-bg: #F4F4F4;
         margin: 0;
         text-decoration: none;
         color: $font-black;
+        max-width: 25ex;
 
         a {
           display: inline-block;
@@ -613,7 +614,7 @@ $footer-bg: #F4F4F4;
   }
 
   .footerEnd {
-    height: 300px;
+    height:30vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -910,12 +911,12 @@ $footer-bg: #F4F4F4;
     width: 90vw;
 
     .invertBlue {
-      width: 150px !important;
+      width: 180px !important;
       height: 50px !important;
     }
 
     .invertOutline {
-      width: 170px !important;
+      width: 180px !important;
       height: 50px !important;
     }
 
@@ -929,11 +930,12 @@ $footer-bg: #F4F4F4;
     }
 
     .futureButtonSpacer {
-      width: 50%;
+      width: 55%;
     }
   }
 
   .footerBody {
+
     .linkSection {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -1184,7 +1186,7 @@ $footer-bg: #F4F4F4;
   }
 
   .footerBG::before {
-    height: 66%
+    height: 65%;
   }
 
   .footerBody {
@@ -1232,6 +1234,7 @@ $footer-bg: #F4F4F4;
     }
 
     .footerEnd {
+      height: 45vh;
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
           -ms-flex-direction: column-reverse;
